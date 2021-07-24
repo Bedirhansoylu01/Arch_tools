@@ -2,7 +2,7 @@
 
 
 echo -e "
-\e[1;\e[1;94m>>>\e[1;0m Welcome to Arch KDE/plasma desktop environment installation \e[1;94m<<<\e[1;0m \n
+\e[1;94m>>>\e[1;0m Welcome to Arch KDE/plasma desktop environment installation \e[1;94m<<<\e[1;0m \n
         Please select your GPU prefrences for open-source driver
         \e[1;33m0-\e[0mI don't want to open-source GPU driver
         \e[1;31m1-\e[0mAMD_Radeon
@@ -22,7 +22,7 @@ case $GPU in
     ;;
 esac
 
-sudo pacman -S xorg sddm plasma kde-applications packagekit-qt5 $GPUD firefox
+sudo pacman -S xorg sddm plasma kde-applications vlc papirus-icon-theme materia-kde $GPUD firefox
 
 sudo systemctl enable sddm
 sudo xdg-settings set default-web-browser firefox.desktop
